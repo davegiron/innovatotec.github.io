@@ -1,71 +1,650 @@
-*{
-    font-family: 'Poppins';
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-
-nav ul{
-     text-align: center;
-}
-
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 25px;
-}
-
-a.active{
-    text-decoration: none;
-    color: inherit;
-}
-
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
-
-img{
-    width: 100%;
-}
-
-.fa{
-    padding: 10px;
-    font-size: 20px;
-    width: 40px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 40%;
-}
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700|Nunito');
+ 
+body{
   
-  /* Add a hover effect if you want */
-.fa:hover{
-    opacity: 0.7;
+  min-height: 200vh;
 }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-.fa-facebook{
-    background: #3B5998;
-    color: white;
-}
-.fa-linkedin{
-    background: #007bb5;
-    color: white;
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 1000000;
 }
 
-div.socmed{
-   display: flex;
-   column-gap: 10%;
-   margin:  -4%;
-   margin-left: auto;
-   margin-right: auto;
-   padding-left: 40%;
+header.sticky{
+  padding: 5px 100px;
+  background: rgb(247, 119, 0) ;
+  
+}
 
+header .logo1{
+  position: relative;
+  font-weight: 700;
+  color:  rgb(0, 0, 0);
+  text-decoration: none;  
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+header ul{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 550px;
+  padding-top: 10px;
+}
+
+li a:after{
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+li a:hover:after{
+  width: 100%;
+}
+
+ 
+
+header ul li{
+  position: relative;
+  list-style: none;
+  font-size: 18px;
+}
+
+header ul li a{
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
 }
  
+header.sticky .logo1,
+header.sticky ul li a{
+  color: #000;
+}
+
+.caption .container{
+  padding: 20px;
+}
+ 
+/*---------------------------------------
+   Innovatotec              
+-----------------------------------------*/
+.logo{
+   
+  padding: 15% 0 15% 5%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+  line-height: inherit;
+}
+
+h1 {
+  color: #252525;
+  font-size: 3em;
+  line-height: normal;
+}
+
+h2 {
+  color: #353535;
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+ 
+h3,
+h3 a {
+  color: #454545;
+}
+
+p {
+  color: #757575;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.value{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #888888;
+}
+ 
+/*---------------------------------------
+   BUTTONS OUR CLIENTS & PARTNER         
+-----------------------------------------*/
+ 
+.about-btn {
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 15px 30px;
+  transition: 0.5s;
+}
+
+.about-btn:hover {
+  background: #ffffff;
+  border-color: transparent;
+}
+
+
+/*---------------------------------------
+    MENU              
+-----------------------------------------*/
+
+.custom-navbar {
+  background: #ffffff;
+  border-top: 5px solid #EE9613;
+  border-bottom: 0;
+  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.custom-navbar .navbar-brand {
+  color: #454545;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.custom-navbar .navbar-nav.navbar-nav-first {
+  margin-left: 8em;
+}
+
+.custom-navbar .navbar-nav.navbar-right li a {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.custom-navbar .navbar-nav.navbar-right li a .fa {
+  background: #EE9613;
+  border-radius: 100%;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.custom-navbar .nav li a {
+  line-height: 40px;
+  color: #575757;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+.custom-navbar .navbar-nav > li > a:hover,
+.custom-navbar .navbar-nav > li > a:focus {
+  background-color: transparent;
+}
+
+.custom-navbar .nav li a:hover {
+  background-color: #ffffff;
+  color: #EE9613;
+}
+
+.custom-navbar .nav li.active > a {
+  background-color: #EE9613;
+  color: #ffffff;
+}
+
+.custom-navbar .navbar-toggle {
+  border: none;
+  padding-top: 10px;
+}
+
+.custom-navbar .navbar-toggle {
+  background-color: transparent;
+}
+
+.custom-navbar .navbar-toggle .icon-bar {
+  background: #252525;
+  border-color: transparent;
+}
+
+
+
+/*---------------------------------------
+    HOME         
+-----------------------------------------*/
+
+#home {
+  padding: 0;
+}
+
+#home h1 {
+  color: #32539A;
+  font-size: 85px;
+  font-family: Times New Roman PS Bold;
+  text-shadow: 3px 3px #888888;
+  letter-spacing: 3px;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+#home h3 {
+  color: #DF8B42;
+  font-size: 25px;
+  font-family: Times New Roman PS Bold;
+  text-shadow: 1px 1px #888888;
+  font-weight: 300;
+  margin: 0;
+  padding: 0px 0px 40px 0;
+}
+
+@media (min-width: 768px) {
+  
+   .col-md-6 {
+    padding-left: 0;
+  }
+}
+
+
+ .caption {
+  display: flex;
+  justify-content: center;
+  padding-top: 130px;
+  text-align: center;
+  height: 100%;
+  color: #fff;
+}
+
+
+ .item {
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  height: 600px;
+}
+
+.caption h3 a { color: #FFF; }
+.caption h3 a:hover { color: #FF3; }
+
+
+ .item-first {
+  /*background-image: url(../images/mainbg.jpg);*/
+    background-position: center;
+}
+
+ 
+
+.social img {
+  display: inline-block !important;
+  border-radius: 50px;
+  width: 70px !important;
+  height: 70px;
+  margin-right: 40px;
+}
+
+/*---------------------------------------
+    ABOUT US              
+-----------------------------------------*/
+
+.feature-thumb {
+  padding: 0em 3em;
+}
+
+.feature-thumb span {
+  background: #3f51b5;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.feature-thumb h3 {
+  margin: 10px 0;
+}
+
+.feature-thumb h1 {
+      font-family: sans-serif;
+      font-weight: bold;
+      margin: 0px auto;
+      color: #252020;
+      text-align: center;
+      font-size: 35px;
+      max-width: 600px;
+      position: relative;
+      font-style: italic;   
+      letter-spacing: -2; 
+      margin-bottom: 70px;
+}
+
+.feature-thumb h1:before {
+      content: "";
+      display: block;
+      width: 150px;
+      height: 7px;
+      background: #252020;
+      left: 0;
+      top: 50%;
+      position: absolute;
+    }
+.feature-thumb h1:after {
+      content: "";
+      display: block;
+      width: 150px;
+      height: 7px;
+      background: #252020;
+      right: 0;
+      top: 50%;
+      position: absolute;
+    }
+.feature-logo {
+  display: block;
+  border-radius: 100%;
+  text-align: center;
+  width: 330px;
+  height: 250px;
+  background-position: center;
+  margin: auto;
+}
+
+.feature-button{
+  background-color: #EE9613;
+  border-radius: 10px;
+  padding: 3px;
+  min-width: 150px;
+}
+.feature-button input[type='submit'] {
+  border-radius: 50px;
+  border: 1px solid transparent;
+}
+
+.feature-button :hover {
+  border-color: #ffffff;
+  background-color: whitesmoke;
+}
+
+
+/*---------------------------------------
+    SERVICES - OLD ABOUT TAGS              
+-----------------------------------------*/
+
+#about{
+  background-color: #f9f9f9;
+   
+}
+
+#about figure {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+}
+
+#about figure span {
+  float: left;
+  margin-left: -15px;
+  padding: 15px 20px;
+  position: relative;
+  top: 20px;
+}
+
+#about figure span i {
+  background: #29ca8e;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.services-logo {
+  display: block;
+  border-radius: 100%;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  margin: auto;
+}
+.service-h1{
+  color: black;
+  background-color: #EE9613;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  border: 1px solid black;;
+  padding: 0px !important;
+  width: auto;
+}
+
+
+
+/*---------------------------------------
+    TEAM              
+-----------------------------------------*/
+
+.team-thumb {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.team-info {
+  padding: 20px 30px;
+}
+
+.team-image img {
+  width: 100%;
+}
+
+.team-thumb .social-icon {
+  border-top: 1px solid #f0f0f0;
+  padding: 4px 20px 0 20px;
+}
+
+.team-thumb .social-icon li a {
+  background: #ffffff;
+  color: #252020;
+}
+
+.team-info h3 {
+  margin: 0;
+}
+
+/*---------------------------------------
+    CONTACT             
+-----------------------------------------*/
+
+#contact {
+  background: #3f51b5;
+}
+
+#contact h2 {
+  color: #ffffff;
+}
+
+#contact .section-title {
+  padding-bottom: 20px;
+}
+
+#contact h2 > small,
+#contact p,
+#contact a {
+  color: #f9f9f9;
+}
+
+/*---------------------------------------
+   FOOTER              
+-----------------------------------------*/
+
+footer {
+  background: #EE9613;
+  padding: 20px 0;
+}
+
+
+/*---------------------------------------
+   RESPONSIVE STYLES              
+-----------------------------------------*/
+
+@media screen and (max-width: 1170px) {
+  .custom-navbar .navbar-nav.navbar-nav-first {
+    margin-left: inherit;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  section,
+  footer {
+    padding: 60px 0;
+  }
+
+  .item {
+    background-position: center center;
+  }
+
+  .feature-thumb,
+  .about-info,
+  .team-thumb,
+  .footer-info {
+    margin-bottom: 50px;
+  }
+
+  .contact-image {
+    margin-top: 50px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .custom-navbar .nav li a {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h1,h2,h3 {
+    line-height: normal;
+  }
+
+  .custom-navbar {
+    background: #ffffff;
+    -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .custom-navbar .navbar-brand,
+  .custom-navbar .nav li a {
+    line-height: normal;
+  }
+
+  .custom-navbar .nav li a {
+    padding: 10px;
+  }
+
+  .custom-navbar .navbar-brand,
+  .top-nav-collapse .navbar-brand {
+    color: #252525;
+    font-weight: 600;
+  }
+
+  .custom-navbar .nav li a,
+  .top-nav-collapse .nav li a {
+    color: #575757;
+  }
+
+  .custom-navbar .navbar-nav.navbar-right li {
+    display: inline-block;
+  }
+
+  .footer-info {
+    margin-right: 0;
+  }
+
+  .footer-info.newsletter-form {
+    margin-bottom: 0;
+  }
+
+  .entry-form {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+@media only screen and (max-width: 580px) {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  #testimonial .item {
+    padding: 2em;
+  }
+
+  .contact-image {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  #home h3 {
+    font-size: 14px;
+  }
+
+  .entry-form {
+    border-radius: 0;
+    padding: 2em;
+    max-width: 100%;
+    max-height: 100%;
+    width: inherit;
+    height: inherit;
+  }
+}
+
+/*bootstrat*/

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-homepage',
@@ -9,7 +10,9 @@ export class HomepageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(){
+    AOS.init();
+  }   
+ }
 
-}
+
